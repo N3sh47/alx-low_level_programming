@@ -1,5 +1,9 @@
 #include <stdio.h>
-int main(void) 
+/**
+ * Program that prints "_putchar" and end with a new line
+ * return 0
+ */
+int main(void)
 {
 printf("_putchar");
 printf("\n");

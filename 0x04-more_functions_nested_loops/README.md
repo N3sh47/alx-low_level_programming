@@ -1,1 +1,3 @@
-C low level programming
+# C - more functions and nested loops
+## Munene John
+### ALX SE Software Engineering

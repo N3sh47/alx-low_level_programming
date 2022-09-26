@@ -1,46 +1,26 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
- *
- * Return: Nothing.
+ * _memset - Fills memory with a constant byte
+ * @s: buffer array
+ * @b: constant byte
+ * @n: number of bytes of memory area to fill
+ * Description: Fill the first `n` bytes of the memory area pointed to by `s`
+ * with the constant byte `b`.
+ * Return: Pointer to memory area `s`
  */
-void simple_print_buffer(char *buffer, unsigned int size)
+
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
+	int i;
 
 	i = 0;
-	while (i < size)
+	while (n > 0)
 	{
-		if (i % 10)
-		{
-			printf(" ");
-		}
-		if (!(i % 10) && i)
-		{
-			printf("\n");
-		}
-		printf("0x%02x", buffer[i]);
+		s[i] = b;
 		i++;
+		n--;
 	}
-	printf("\n");
-}
 
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	char buffer[98] = {0x00};
-
-	simple_print_buffer(buffer, 98);
-	_memset(buffer, 0x01, 95);
-	printf("-------------------------------------------------\n");
-	simple_print_buffer(buffer, 98);
-	return (0);
+	return (s);
 }

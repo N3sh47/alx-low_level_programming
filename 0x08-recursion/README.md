@@ -1,3 +1,1 @@
-0x08 Recursion 
-Munene John
-ALX SE Africa
+# 0x07. C - Recursion
